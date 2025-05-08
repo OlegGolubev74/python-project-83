@@ -1,0 +1,12 @@
+.venv/
+dist/
+.env 
+__pycache__/
+.pytest_cache/
+.python-version
+.ruff_cache/
+my_note.txt
+*.odt
+*.txt
+demo.cast
+/sonar-project.properties
