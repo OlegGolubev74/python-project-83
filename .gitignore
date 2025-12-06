@@ -8,5 +8,10 @@ __pycache__/
 my_note.txt
 *.odt
 *.txt
+*.pdf
 demo.cast
 /sonar-project.properties
+.ruff_cache/
+TEMP/
+tmp.py
+404.html
