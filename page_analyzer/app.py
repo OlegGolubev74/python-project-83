@@ -169,7 +169,6 @@ def check_url(id):
         flash("Страница успешно проверена", 'success')
         
     except Exception:
-        # Все исключения обрабатываем одинаково - без деталей
         flash("Произошла ошибка при проверке", 'danger')
     
     return redirect(f'/urls/{id}')
