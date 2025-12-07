@@ -5,8 +5,9 @@ import psycopg2
 import requests
 from dotenv import load_dotenv
 from flask import Flask, flash, redirect, render_template, request
-from parser import parse_html
-from url_normalizer import normalize_url, validate_url
+
+from .parser import parse_html
+from .url_normalizer import normalize_url, validate_url
 
 load_dotenv()
 DATABASE_URL = os.getenv('DATABASE_URL')
