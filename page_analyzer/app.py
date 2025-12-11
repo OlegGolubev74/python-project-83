@@ -27,13 +27,13 @@ def analyze():
     is_valid, error_message = validate_url(url)
     if not is_valid:
         flash(error_message, 'danger')
-        return redirect(f'/?url={url}')
+        return render_template('index.html', url=url), 422
     
     # Нормализация URL
     normalized_url = normalize_url(url)
     if not normalized_url:
         flash("Некорректный URL", 'danger')
-        return redirect(f'/?url={url}')
+        return render_template('index.html', url=url), 422
     
     # Отладочная информация
     print(f"Оригинальный URL: {url}")
