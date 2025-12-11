@@ -77,16 +77,14 @@
                         {% if checks %}
                             {% for check in checks %}
                             <tr>
-                                <td>{{ check[0] }}</td>
-                                <td>{{ check[2] }}</td>
-                                <td>{{ check[3] if check[3] else '' }}</td>
-                                <td>{{ check[4] if check[4] else '' }}</td>
-                                <td>{{ check[5] if check[5] else '' }}</td>
-                                <td>{{ check[6].strftime('%Y-%m-%d') }}</td>
+                                <td>{{ check.id }}</td>
+                                <td>{{ check.status_code }}</td>
+                                <td>{{ check.h1 if check.h1 else '' }}</td>
+                                <td>{{ check.title if check.title else '' }}</td>
+                                <td>{{ check.description if check.description else '' }}</td>
+                                <td>{{ check.created_at.strftime('%Y-%m-%d') }}</td>
                             </tr>
                             {% endfor %}
-                        {% else %}
-                            <!-- Пустая таблица (без строки "Нет данных") -->
                         {% endif %}
                     </tbody>
                 </table>
